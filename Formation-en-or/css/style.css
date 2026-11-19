@@ -8,6 +8,12 @@
 body{margin:0;background:var(--ign-fond);color:var(--ign-encre);font:16px/1.5 var(--police)}
 .bandeau{display:flex;justify-content:space-between;align-items:center;gap:1rem;background:var(--ign-bleu);padding:.9rem 1.2rem}
 .titre{color:var(--ign-blanc);font-size:1.3rem;font-weight:700;text-decoration:none}
+.titre img{display:block;height:56px;width:auto}
+body{position:relative;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:url(../img/filigrane.svg) center 55%/min(80vw,720px) no-repeat;opacity:.07}
+.bandeau,main{position:relative;z-index:1}
+@media print{body::before{display:none}}
 button{font:inherit;cursor:pointer;border:0;border-radius:6px;padding:.55rem 1rem;background:var(--ign-bleu);color:var(--ign-blanc)}
 button:hover{background:var(--ign-bleu-clair)}
 .son{background:transparent;border:1px solid rgba(255,255,255,.6)}
