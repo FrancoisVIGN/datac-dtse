@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Une famille en or</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="bandeau">
+  <a class="titre" href="#">Une famille en or</a>
+  <button id="son" class="son" aria-pressed="true" title="Couper ou activer le son">Son activé</button>
+</header>
+<main>
+  <section id="catalogue">
+    <input id="recherche" type="search" placeholder="Rechercher une question…" aria-label="Rechercher une question">
+    <div id="filtres" class="filtres"></div>
+    <div id="liste" class="liste"></div>
+    <p id="vide" class="vide" hidden>Aucune question ne correspond. Essayez un autre mot ou une autre catégorie.</p>
+  </section>
+  <section id="jeu" hidden>
+    <div class="entete-jeu">
+      <a href="#" class="retour">Retour aux questions</a>
+      <div id="croix" class="croix" aria-label="Erreurs"></div>
+    </div>
+    <h1 id="enonce"></h1>
+    <ol id="tableau" class="tableau"></ol>
+    <form id="form" autocomplete="off">
+      <input id="saisie" type="text" placeholder="Votre réponse…" aria-label="Votre réponse">
+      <button type="submit">Valider</button>
+    </form>
+    <p id="message" class="message" role="status"></p>
+    <div class="pied-jeu">
+      <span>Score : <strong id="score">0</strong></span>
+      <span><button id="reveler" type="button">Tout révéler</button> <button id="rejouer" type="button">Rejouer</button></span>
+    </div>
+  </section>
+</main>
+<script src="js/matcher.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

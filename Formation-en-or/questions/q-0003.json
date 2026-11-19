@@ -1,0 +1,3 @@
+{"id":"q-0003","question":"Citez un instrument de mesure utilisé en topographie","categorie":"Cartographie","reponses":[
+{"libelle":"Théodolite","points":35},{"libelle":"GPS","points":30,"alias":["gnss","recepteur gps"]},
+{"libelle":"Niveau","points":15,"alias":["niveau optique"]},{"libelle":"Tachéomètre","points":12,"alias":["station totale"]},{"libelle":"Mire","points":8}]}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "q-0001",
+    "question": "Citez un fruit rouge",
+    "categorie": "Alimentation",
+    "nb": 5
+  },
+  {
+    "id": "q-0002",
+    "question": "Citez un fleuve de France",
+    "categorie": "Géographie",
+    "nb": 5
+  },
+  {
+    "id": "q-0003",
+    "question": "Citez un instrument de mesure utilisé en topographie",
+    "categorie": "Cartographie",
+    "nb": 5
+  }
+]
