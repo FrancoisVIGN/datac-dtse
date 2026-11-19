@@ -1,0 +1,6 @@
+{"id":"q-0004","question":"Sur quels documents doit s’appuyer votre travail ?","categorie":"Gestion intégrée du littoral","reponses":[
+{"libelle":"Directive Cadre sur le Milieu Marin","points":10},
+{"libelle":"Directive Cadre sur la planification de l’espace Maritime","points":10,"alias":["gnss","recepteur gps"]},
+{"libelle":"Stratégie Nationale pour la Mer et le littoral","points":15,"alias":["niveau optique"]},
+{"libelle":"Document stratégique de Façade","points":30,"alias":["station totale"]},
+{"libelle":"Plan de gestion du Parc Marin de la Côte bleue","points":35}]}
