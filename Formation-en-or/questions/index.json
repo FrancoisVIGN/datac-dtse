@@ -16,11 +16,41 @@
     "question": "Citez un instrument de mesure utilisé en topographie",
     "categorie": "Cartographie",
     "nb": 5
-  },
+  }
   {
     "id": "q-0004",
     "question": "Sur quels documents doit s’appuyer votre travail ?",
     "categorie": "Gestion intégrée du littoral",
     "nb": 5
+  }
+  {
+    "id": "q-0005",
+    "question": "Dans quelle zone de vocation se situe votre projet PMCB ?",
+    "categorie": "Gestion intégrée du littoral",
+    "nb": 1
+  }
+  {
+    "id": "q-0006",
+    "question": "Sur quels sont les dispositifs exitants sur la zone du PMCB ?",
+    "categorie": "Gestion intégrée du littoral",
+    "nb": 10
+  }
+  {
+    "id": "q-0007",
+    "question": "Quelles prescription et recommandation sur la zone PMCB ?",
+    "categorie": "Gestion intégrée du littoral",
+    "nb": 3
+  }
+  {
+    "id": "q-0008",
+    "question": "Quels objectifs stratégiques sont concernés ?",
+    "categorie": "Gestion intégrée du littoral",
+    "nb": 2
+  }
+  {
+    "id": "q-0009",
+    "question": "L’immersion d’épave de bateau est il compatible avec les objectifs du DSF ?",
+    "categorie": "Gestion intégrée du littoral",
+    "nb": 4
   }
 ]
