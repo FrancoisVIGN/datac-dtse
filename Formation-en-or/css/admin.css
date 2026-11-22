@@ -1,0 +1,12 @@
+label{display:block;font-weight:600;margin:.8rem 0}
+label input{display:block;width:100%;margin-top:.25rem;padding:.6rem .8rem;font:inherit;font-weight:400;border:2px solid var(--ign-ligne);border-radius:6px;background:var(--ign-blanc)}
+fieldset{border:1px solid var(--ign-ligne);border-radius:6px;margin:1rem 0;padding:.5rem 1rem 1rem;background:var(--ign-blanc)}
+legend{font-weight:700;color:var(--ign-bleu);padding:0 .4rem}
+.rep{display:grid;grid-template-columns:1.6rem 2fr 5rem 2fr auto;gap:.4rem;align-items:center;margin:.4rem 0}
+.rep input{padding:.5rem;font:inherit;border:2px solid var(--ign-ligne);border-radius:6px;min-width:0}
+.rep .n{font-weight:700;color:var(--ign-bleu)}
+.rep .outils{display:flex;gap:.2rem}
+.rep .outils button,.secondaire{background:var(--ign-blanc);color:var(--ign-bleu);border:1px solid var(--ign-ligne);padding:.3rem .6rem}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 1rem}
+pre{background:#fff;border:1px solid var(--ign-ligne);border-radius:6px;padding:.8rem;overflow:auto;max-height:260px;font-size:.85rem}
+@media (max-width:640px){.rep{grid-template-columns:1.6rem 1fr 4.5rem}.rep .ali,.rep .outils{grid-column:2/4}}
