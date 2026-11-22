@@ -52,7 +52,7 @@ function felicitations() {
     `<i style="left:${Math.random() * 100}%;background:${couleurs[Math.floor(Math.random() * 5)]};` +
     `animation-delay:${Math.random() * 2}s;animation-duration:${3 + Math.random() * 3}s"></i>`).join("");
   $("banderole").hidden = false;
-  minuteur = setTimeout(cacherBanderole, 10000);
+  minuteur = setTimeout(cacherBanderole, 20000);
 }
 $("banderole").onclick = cacherBanderole;
 
