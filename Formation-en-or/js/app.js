@@ -57,7 +57,6 @@ function felicitations() {
 $("banderole").onclick = cacherBanderole;
 
 /* ---------- Echec : banderole 20 s + confettis ---------- */
-let minuteur;
 function cacherDefaite() {
   clearTimeout(minuteur); $("defaite").hidden = true; $("confettis").innerHTML = "";
 }
