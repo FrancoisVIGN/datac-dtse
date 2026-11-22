@@ -1,0 +1,34 @@
+{
+  "id": "q-0010",
+  "question": "Pourquoi aime-t-on autant Pauline",
+  "categorie": "Famille",
+  "reponses": [
+    {
+      "libelle": "Douceur",
+      "points": 30
+    },
+    {
+      "libelle": "Sourire",
+      "points": 23,
+      "alias": [
+        "lèvres;dents;smile"
+      ]
+    },
+    {
+      "libelle": "Yeux",
+      "points": 18
+    },
+    {
+      "libelle": "Cuisine",
+      "points": 12
+    },
+    {
+      "libelle": "Bonne humeur",
+      "points": 17
+    },
+    {
+      "libelle": "Humour",
+      "points": 15
+    }
+  ]
+}
