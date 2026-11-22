@@ -58,7 +58,7 @@ function demarrer(data) {
 function terminer(gagne) {
   fini = true; $("saisie").disabled = true;
   message(gagne ? "Bravo, toutes les réponses sont trouvées !" : "Trois erreurs : la manche est terminée.", gagne ? "ok" : "ko");
-  if (gagne) sons.gagne();
+  if (gagne) { sons.gagne(); felicitations(); }
   dessiner();
 }
 $("form").onsubmit = e => {
