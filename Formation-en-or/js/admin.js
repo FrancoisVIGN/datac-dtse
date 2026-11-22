@@ -47,7 +47,20 @@ function construire(idx) {
   const nouvelIndex = [...idx, entree].sort((a, b) => a.id.localeCompare(b.id));
   return { id, q: { id, question, categorie, reponses }, nouvelIndex };
 }
+function total() {
+  const t = [...document.querySelectorAll(".rep .pts")].reduce((s, i) => s + (Number(i.value) || 0), 0);
+  $("total").textContent = `Total des points : ${t} / 100` + (t < 100 ? ` (il manque ${100 - t})` : t > 100 ? ` (${t - 100} en trop)` : " ✓");
+  $("total").className = "total " + (t === 100 ? "ok" : t > 100 ? "ko" : "bas");
+}
+$("trier").onclick = () => {
+  const val = l => { const v = l.querySelector(".pts").value; return v === "" ? -Infinity : Number(v); };
+  [...document.querySelectorAll(".rep")].map((l, i) => [l, i])
+    .sort((a, b) => val(b[0]) - val(a[0]) || a[1] - b[1])
+    .forEach(([l]) => $("reps").appendChild(l));
+  numeroter();
+};
 function apercu() {
+  total();
   try { $("apercu").textContent = JSON.stringify(construire(index).q, null, 2); }
   catch (e) { $("apercu").textContent = "(complétez le formulaire pour voir l'aperçu)"; }
 }
