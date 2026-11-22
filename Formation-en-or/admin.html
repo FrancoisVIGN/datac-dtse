@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ajouter une question – Une formation en or</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<header class="bandeau">
+  <a class="titre" href="index.html" aria-label="Retour au jeu"><img src="img/logo.svg" alt="Une formation en or" height="56"></a>
+</header>
+<main>
+  <h1>Ajouter une question</h1>
+  <form id="f" autocomplete="off">
+    <label>Catégorie <input id="categorie" list="cats" placeholder="Ex. Cartographie" required></label>
+    <datalist id="cats"></datalist>
+    <label>Question <input id="question" placeholder="Ex. Citez un instrument de mesure…" required></label>
+    <fieldset>
+      <legend>Réponses (dans l'ordre du classement)</legend>
+      <div id="reps"></div>
+      <button type="button" id="ajout" class="secondaire">+ Ajouter une réponse</button>
+    </fieldset>
+    <details open><summary>Aperçu du fichier</summary><pre id="apercu"></pre></details>
+    <button type="button" id="telecharger">Télécharger les fichiers</button>
+    <fieldset>
+      <legend>Publier directement sur GitHub</legend>
+      <div class="grille">
+        <label>Compte ou organisation <input id="owner" placeholder="mon-compte"></label>
+        <label>Dépôt <input id="repo" placeholder="mon-depot"></label>
+        <label>Branche <input id="branche" value="main"></label>
+        <label>Jeton d'accès <input id="jeton" type="password" placeholder="github_pat_…"></label>
+      </div>
+      <button type="button" id="publier">Publier la question</button>
+    </fieldset>
+    <p id="msg" class="message" role="status"></p>
+  </form>
+</main>
+<script src="js/admin.js"></script>
+</body>
+</html>
