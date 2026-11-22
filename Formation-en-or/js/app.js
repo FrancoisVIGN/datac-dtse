@@ -40,7 +40,7 @@ function afficherFiltres() {
   $("filtres").querySelectorAll("button").forEach(b => b.onclick = () => { categorie = b.textContent; afficherFiltres(); afficherCatalogue(); });
 }
 
-/* ---------- Félicitations : banderole 10 s + confettis ---------- */
+/* ---------- Félicitations : banderole 20 s + confettis ---------- */
 let minuteur;
 function cacherBanderole() {
   clearTimeout(minuteur); $("banderole").hidden = true; $("confettis").innerHTML = "";
@@ -55,6 +55,22 @@ function felicitations() {
   minuteur = setTimeout(cacherBanderole, 20000);
 }
 $("banderole").onclick = cacherBanderole;
+
+/* ---------- Echec : banderole 20 s + confettis ---------- */
+let minuteur;
+function cacherDefaite() {
+  clearTimeout(minuteur); $("defaite").hidden = true; $("confettis").innerHTML = "";
+}
+function dommage() {
+  cacherDefaite();
+  const couleurs = ["#f5c542", "#fff3b0", "#2f6fba", "#ffffff", "#d62828"];
+  $("confettis").innerHTML = Array.from({length: 60}, () =>
+    `<i style="left:${Math.random() * 100}%;background:${couleurs[Math.floor(Math.random() * 5)]};` +
+    `animation-delay:${Math.random() * 2}s;animation-duration:${3 + Math.random() * 3}s"></i>`).join("");
+  $("defaite").hidden = false;
+  minuteur = setTimeout(cacherDefaite, 20000);
+}
+$("defaite").onclick = cacherDefaite;
 
 /* ---------- Jeu ---------- */
 function message(t, cls = "") { $("message").textContent = t; $("message").className = "message " + cls; }
@@ -75,7 +91,7 @@ function demarrer(data) {
 function terminer(gagne) {
   fini = true; $("saisie").disabled = true;
   message(gagne ? "Bravo, toutes les réponses sont trouvées !" : "Trois erreurs : la manche est terminée.", gagne ? "ok" : "ko");
-  if (gagne) { sons.gagne(); felicitations(); }
+  if (gagne) { sons.gagne(); felicitations(); } else {dommage();}
   dessiner();
 }
 $("form").onsubmit = e => {
