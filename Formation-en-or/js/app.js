@@ -40,6 +40,22 @@ function afficherFiltres() {
   $("filtres").querySelectorAll("button").forEach(b => b.onclick = () => { categorie = b.textContent; afficherFiltres(); afficherCatalogue(); });
 }
 
+/* ---------- Félicitations : banderole 10 s + confettis ---------- */
+let minuteur;
+function cacherBanderole() {
+  clearTimeout(minuteur); $("banderole").hidden = true; $("confettis").innerHTML = "";
+}
+function felicitations() {
+  cacherBanderole();
+  const couleurs = ["#f5c542", "#fff3b0", "#2f6fba", "#ffffff", "#d62828"];
+  $("confettis").innerHTML = Array.from({length: 60}, () =>
+    `<i style="left:${Math.random() * 100}%;background:${couleurs[Math.floor(Math.random() * 5)]};` +
+    `animation-delay:${Math.random() * 2}s;animation-duration:${3 + Math.random() * 3}s"></i>`).join("");
+  $("banderole").hidden = false;
+  minuteur = setTimeout(cacherBanderole, 10000);
+}
+$("banderole").onclick = cacherBanderole;
+
 /* ---------- Jeu ---------- */
 function message(t, cls = "") { $("message").textContent = t; $("message").className = "message " + cls; }
 function dessiner() {
@@ -51,6 +67,7 @@ function dessiner() {
   $("score").textContent = score;
 }
 function demarrer(data) {
+  cacherBanderole();
   q = data; trouvees = new Set(); erreurs = 0; score = 0; fini = false;
   $("enonce").textContent = q.question; $("saisie").value = ""; $("saisie").disabled = false;
   message(""); dessiner(); $("saisie").focus();
@@ -78,7 +95,7 @@ $("rejouer").onclick = () => q && demarrer(q);
 /* ---------- Navigation par #id ---------- */
 async function route() {
   const id = location.hash.slice(1);
-  if (!id) { $("jeu").hidden = true; $("catalogue").hidden = false; return; }
+  if (!id) { cacherBanderole(); $("jeu").hidden = true; $("catalogue").hidden = false; return; }
   try {
     const r = await fetch(`questions/${encodeURIComponent(id)}.json`);
     if (!r.ok) throw 0;
