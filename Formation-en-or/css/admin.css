@@ -10,3 +10,5 @@ legend{font-weight:700;color:var(--ign-bleu);padding:0 .4rem}
 .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0 1rem}
 pre{background:#fff;border:1px solid var(--ign-ligne);border-radius:6px;padding:.8rem;overflow:auto;max-height:260px;font-size:.85rem}
 @media (max-width:640px){.rep{grid-template-columns:1.6rem 1fr 4.5rem}.rep .ali,.rep .outils{grid-column:2/4}}
+.total{font-weight:700;margin:.6rem 0;padding:.4rem .8rem;border-radius:6px;display:inline-block;background:#fff4d6;color:#7a5200}
+.total.ok{background:#dff3e6;color:var(--ok)}.total.ko{background:#fde3e3;color:var(--erreur)}
